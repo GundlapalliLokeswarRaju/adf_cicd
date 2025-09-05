@@ -1,0 +1,9 @@
+{
+	"name": "cosmosdbazfv1",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "530aa801-d19b-4c61-a0ee-db3713bbf233",
+		"tenantId": "1128561d-5743-449a-bc4d-02dd1626e1d7"
+	}
+}
