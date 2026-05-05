@@ -1,0 +1,21 @@
+{
+	"name": "IR_ls",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "localhost,1433",
+			"database": "adfconnection",
+			"encrypt": "mandatory",
+			"trustServerCertificate": true,
+			"authenticationType": "SQL",
+			"userName": "adfuser",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJmZjAzODg1MC05N2JlLTRjZGEtYWJkNS0wYTY1Njc5YTUzZGYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "Local-SQL-IR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

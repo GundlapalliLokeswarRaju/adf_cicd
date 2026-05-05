@@ -1,0 +1,15 @@
+{
+	"name": "myfactory2026v1",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ecc3efe1-9d4c-4d38-84ec-02bfd85b498e",
+		"tenantId": "96052473-2342-49a5-bc20-4a8378e81d36"
+	}
+}
