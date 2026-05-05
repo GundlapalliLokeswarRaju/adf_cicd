@@ -1,0 +1,175 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "myfactory2026v1"
+		},
+		"CosmosDbNoSql1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'CosmosDbNoSql1'"
+		},
+		"IR_ls_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'IR_ls'"
+		},
+		"ls_azuresql2026v1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_azuresql2026v1'"
+		},
+		"ls_ourblob2026v1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_ourblob2026v1'"
+		},
+		"ls_ourdatalake_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_ourdatalake'"
+		},
+		"ls_ourdatalake2026v1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_ourdatalake2026v1'"
+		},
+		"ls_sqlserver_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_sqlserver'"
+		},
+		"IR_ls_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost,1433"
+		},
+		"IR_ls_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "adfconnection"
+		},
+		"IR_ls_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "adfuser"
+		},
+		"ls_azuresql2026v1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "mydatabase2026v1.database.windows.net"
+		},
+		"ls_azuresql2026v1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "mydata2026v1"
+		},
+		"ls_azuresql2026v1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "mysqladmin"
+		},
+		"ls_ourblob2026v1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://ourblobstorage2026v1.dfs.core.windows.net/"
+		},
+		"ls_ourdatalake_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://ourdatalakecosmosdbv1.dfs.core.windows.net/"
+		},
+		"ls_ourdatalake2026v1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://ourdatalake2026v2.dfs.core.windows.net/"
+		},
+		"ls_sqlserver_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "mydatabase2026v1.database.windows.net"
+		},
+		"ls_sqlserver_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "mydata2026v1"
+		},
+		"ls_sqlserver_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "mysqladmin"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "myfactory2026v1_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"CosmosDbNoSql1_connectionString": {
+						"value": "[parameters('CosmosDbNoSql1_connectionString')]"
+					},
+					"ls_azuresql2026v1_password": {
+						"value": "[parameters('ls_azuresql2026v1_password')]"
+					},
+					"ls_ourblob2026v1_accountKey": {
+						"value": "[parameters('ls_ourblob2026v1_accountKey')]"
+					},
+					"ls_ourdatalake_accountKey": {
+						"value": "[parameters('ls_ourdatalake_accountKey')]"
+					},
+					"ls_ourdatalake2026v1_accountKey": {
+						"value": "[parameters('ls_ourdatalake2026v1_accountKey')]"
+					},
+					"ls_sqlserver_password": {
+						"value": "[parameters('ls_sqlserver_password')]"
+					},
+					"IR_ls_password": {
+						"value": "[parameters('IR_ls_password')]"
+					},
+					"ls_azuresql2026v1_properties_typeProperties_server": {
+						"value": "[parameters('ls_azuresql2026v1_properties_typeProperties_server')]"
+					},
+					"ls_azuresql2026v1_properties_typeProperties_database": {
+						"value": "[parameters('ls_azuresql2026v1_properties_typeProperties_database')]"
+					},
+					"ls_azuresql2026v1_properties_typeProperties_userName": {
+						"value": "[parameters('ls_azuresql2026v1_properties_typeProperties_userName')]"
+					},
+					"ls_ourblob2026v1_properties_typeProperties_url": {
+						"value": "[parameters('ls_ourblob2026v1_properties_typeProperties_url')]"
+					},
+					"ls_ourdatalake_properties_typeProperties_url": {
+						"value": "[parameters('ls_ourdatalake_properties_typeProperties_url')]"
+					},
+					"ls_ourdatalake2026v1_properties_typeProperties_url": {
+						"value": "[parameters('ls_ourdatalake2026v1_properties_typeProperties_url')]"
+					},
+					"ls_sqlserver_properties_typeProperties_server": {
+						"value": "[parameters('ls_sqlserver_properties_typeProperties_server')]"
+					},
+					"ls_sqlserver_properties_typeProperties_database": {
+						"value": "[parameters('ls_sqlserver_properties_typeProperties_database')]"
+					},
+					"ls_sqlserver_properties_typeProperties_userName": {
+						"value": "[parameters('ls_sqlserver_properties_typeProperties_userName')]"
+					},
+					"IR_ls_properties_typeProperties_server": {
+						"value": "[parameters('IR_ls_properties_typeProperties_server')]"
+					},
+					"IR_ls_properties_typeProperties_database": {
+						"value": "[parameters('IR_ls_properties_typeProperties_database')]"
+					},
+					"IR_ls_properties_typeProperties_userName": {
+						"value": "[parameters('IR_ls_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

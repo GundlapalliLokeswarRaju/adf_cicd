@@ -1,0 +1,72 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "myfactory2026v1"
+		},
+		"CosmosDbNoSql1_connectionString": {
+			"value": ""
+		},
+		"IR_ls_password": {
+			"value": ""
+		},
+		"ls_azuresql2026v1_password": {
+			"value": ""
+		},
+		"ls_ourblob2026v1_accountKey": {
+			"value": ""
+		},
+		"ls_ourdatalake_accountKey": {
+			"value": ""
+		},
+		"ls_ourdatalake2026v1_accountKey": {
+			"value": ""
+		},
+		"ls_sqlserver_password": {
+			"value": ""
+		},
+		"IR_ls_properties_typeProperties_server": {
+			"value": "localhost,1433"
+		},
+		"IR_ls_properties_typeProperties_database": {
+			"value": "adfconnection"
+		},
+		"IR_ls_properties_typeProperties_userName": {
+			"value": "adfuser"
+		},
+		"ls_azuresql2026v1_properties_typeProperties_server": {
+			"value": "mydatabase2026v1.database.windows.net"
+		},
+		"ls_azuresql2026v1_properties_typeProperties_database": {
+			"value": "mydata2026v1"
+		},
+		"ls_azuresql2026v1_properties_typeProperties_userName": {
+			"value": "mysqladmin"
+		},
+		"ls_ourblob2026v1_properties_typeProperties_url": {
+			"value": "https://ourblobstorage2026v1.dfs.core.windows.net/"
+		},
+		"ls_ourdatalake_properties_typeProperties_url": {
+			"value": "https://ourdatalakecosmosdbv1.dfs.core.windows.net/"
+		},
+		"ls_ourdatalake2026v1_properties_typeProperties_url": {
+			"value": "https://ourdatalake2026v2.dfs.core.windows.net/"
+		},
+		"ls_sqlserver_properties_typeProperties_server": {
+			"value": "mydatabase2026v1.database.windows.net"
+		},
+		"ls_sqlserver_properties_typeProperties_database": {
+			"value": "mydata2026v1"
+		},
+		"ls_sqlserver_properties_typeProperties_userName": {
+			"value": "mysqladmin"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
